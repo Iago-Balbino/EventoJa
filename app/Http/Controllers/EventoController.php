@@ -28,13 +28,12 @@ class EventoController extends Controller
      */
     public function index()
     {
-        $eventos = Evento::all();
-
+        $eventos = Evento::all();     
         return view('home',compact('eventos'));
 
         //return view('home');
     }
-
+    
     public function inscrever(Request $request)
     {
         $inscricao = new Subscription();
@@ -50,4 +49,5 @@ class EventoController extends Controller
         $usuario = User::find($meusEv);
         return 'ok';
     }
+
 }

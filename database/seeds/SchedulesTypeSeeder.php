@@ -13,9 +13,9 @@ class SchedulesTypeSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('tipo_programacao')->insert([
-        //     'nome' => 'Palestra',
-        // ]);
+        DB::table('tipo_programacao')->insert([
+             'nome' => 'Palestra',
+         ]);
         
         DB::table('tipo_programacao')->insert([
             'nome' => 'Minicurso',

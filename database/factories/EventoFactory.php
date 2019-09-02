@@ -23,13 +23,13 @@ $faker = \Faker\Factory::create('pt_BR');
 $factory->define(Evento::class, function (Faker $faker) {
     
     $tipo_evento = ScheduleType::pluck('id')->toArray();
-    
+
     return [
         'nome' => $faker->name,
         'local' => $faker->city . '-' . $faker->state,
         'data_inicio' => now(),
         'data_fim' =>  now()->addMonth(2),
         'num_max_participantes' => rand(1, 50),
-        'tipo_programacao_id' => $faker->randomElement($tipo_evento)
+        'tipo_programacao_id' => rand(1, 3)
     ];
 });

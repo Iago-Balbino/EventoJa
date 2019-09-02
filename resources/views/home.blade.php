@@ -18,7 +18,7 @@
                     @endif
                     <table class="table table-bordered">
                         <tr class="text-center">
-                            <th>tipo_evento</th>
+                            <th>Tipo Evento</th>
                             <th>Nome</th>
                             <th>Data Inicio</th>
                             <th>Data Fim</th>
@@ -28,7 +28,7 @@
                         </tr>
                         @foreach ($eventos as $evento)
                         <tr class="text-center">
-                            <td>{{ $evento->tipo_evento }}</td>
+                            <td>{{ $evento->evento->nome}}</td>
                             <td>{{ $evento->nome }}</td>
                             <td>{{ $evento->data_inicio }}</td>
                             <td>{{ $evento->data_fim }}</td>
